@@ -5,7 +5,8 @@ A map where players can vote for next playing maps.
 ## Setup
 
 1. Edit Game.ini, make this map (UGC3189342) the only map in your server's map rotation list.
-2. Create `menu_config.json` as `~/pavlovserver/Pavlov/Saved/Config/ModSave/menu_config.json` in your pavlov server, with the following content:
+2. Run a RCON http relay endpoint with [UGC3189342/Resources/rcon.py](UGC3189342/Resources/rcon.py)
+3. Create `menu_config.json` as `~/pavlovserver/Pavlov/Saved/Config/ModSave/menu_config.json` in your pavlov server, with the following content:
 
 ```json
 {
@@ -15,18 +16,19 @@ A map where players can vote for next playing maps.
     "server": "<rcon_ip_or_domain>",
     "port": 12345,
     "password": "<rcon_password>",
-    // vote time config
-    "vote_round_time": 300, // time in seconds to end vote
+    // time in seconds to end vote
+    "vote_round_time": 300,
     // map config
     "maps": [
         ["Map Display Name 1", "UGCXXXXXXX", "TDM", "http://xxx-16:9-image-to-display.png"],
-        ["Map Display Name 2", "UGCYYYYYYY", "CUSTOM", "http://yyy-16:9-image-to-display.png"],
-        // ...
+        ["Map Display Name 2", "UGCYYYYYYY", "CUSTOM", "http://yyy-16:9-image-to-display.png"]
     ]
 }
 ```
 
-3. Run a RCON http relay endpoint with [UGC3189342/Resources/rcon.py](UGC3189342/Resources/rcon.py)
+**REMOVE `//` comments before use.**
+
+Demo MiniMenu.umap Level supports up to 6 maps. Want more? See below.
 
 
 ## Make your own menu map
