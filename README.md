@@ -26,14 +26,11 @@ A map where players can vote for next playing maps.
 }
 ```
 
-To run a RCON http relay endpoint ,run [Resources/rcon.py](Resources/rcon.py)
+3. Run a RCON http relay endpoint with [UGC3189342/Resources/rcon.py](UGC3189342/Resources/rcon.py)
 
 
 ## Make your own menu map
 
-Copy `UGC3189342` folder to your `Plugins/` folder of PavlovVR-ModKit
-
-*See `Plugins/UGC3189342/Content/Levels/MiniMenu.umap`*
 
 Menu Map is essentially composed of:
 
@@ -42,19 +39,22 @@ Menu Map is essentially composed of:
 3. Multiple BP_MapView to display map list.
 4. A config file described above
 
+### 1. Copy `UGC3189342` folder to your `Plugins/` folder of PavlovVR-ModKit
+
+*See `Plugins/UGC3189342/Content/Levels/MiniMenu.umap`*
+
+### 2. Migrate `Plugins/UGC3189342/Content/Blueprints` into your plugin folder
+
 Make sure these BPs are in your level.
 
-### 1. Migrate `Plugins/UGC3189342/Content/Blueprints` into your plugin folder
-
-
-### 2. Drag BP_MapView objects to desired location near a surface
+### 3. Drag BP_MapView objects to desired location near a surface
 
 The image of map specified in config will be displayed on the surface as decal, also names and voters will display near it.
 
-### 3. Edit parameters of BP_MapVoteController object
+### 4. Edit parameters of BP_MapVoteController object
 
 Add all BP_MapView objects to `Map Pool`. The order you add is the order that displays in the level, unused BP_MapView will be hidden & deactivated in game.
 
 Set `Bill Board` to the BP_Billboard object in your level. You can customize this blueprint.
 
-### 4. Run RCON relay, Create config on your pavlov server. Done!
+### 5. Run RCON relay, Create config on your pavlov server. Done!
