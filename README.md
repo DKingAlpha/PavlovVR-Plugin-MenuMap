@@ -33,30 +33,24 @@ Demo MiniMenu.umap Level supports up to 6 maps. Want more? See below.
 
 ## Make your own menu map
 
-
 Menu Map is essentially composed of:
 
-1. An unique BP_MapVoteController to control the vote process
-2. An unique BP_Billboard to display countdown
-3. Multiple BP_MapView to display map list.
-4. A config file described above
+1. An unique Actor inheriting BP_VoteControllerBase to control the vote process on server side.
+2. Anything to display countdown
+3. Multiple Actors inheriting BP_VoteProxyBase to display maps as an option to client side.
+4. A json config file described above
 
 ### 1. Copy `UGC3189342` folder to your `Plugins/` folder of PavlovVR-ModKit
 
-*See `Plugins/UGC3189342/Content/Levels/MiniMenu.umap`*
+*See `Plugins/UGC3189342/Content/Levels/MiniMenu.umap` for usage*
 
 ### 2. Migrate `Plugins/UGC3189342/Content/Blueprints` into your plugin folder
 
 Make sure these BPs are in your level.
 
-### 3. Drag BP_MapView objects to desired location near a surface
+### 3. Drag BP_VoteControllerMap into your level
 
-The image of map specified in config will be displayed on the surface as decal, also names and voters will display near it.
+Edit properties if needed.
 
-### 4. Edit parameters of BP_MapVoteController object
+### 4. Run RCON relay, Create config on your pavlov server. Done! Start PavlovServer now.
 
-Add all BP_MapView objects to `Map Pool`. The order you add is the order that displays in the level, unused BP_MapView will be hidden & deactivated in game.
-
-Set `Bill Board` to the BP_Billboard object in your level. You can customize this blueprint.
-
-### 5. Run RCON relay, Create config on your pavlov server. Done!
