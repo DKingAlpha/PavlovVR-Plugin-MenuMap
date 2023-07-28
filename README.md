@@ -28,10 +28,9 @@ A map where players can vote for next playing maps.
 
 **REMOVE `//` comments before use.**
 
-Demo MiniMenu.umap Level supports up to 6 maps. Want more? See below.
-
-
 ## Make your own menu map
+
+**See `Plugins/UGC3189342/Content/Levels/MiniMenu.umap` for example**
 
 Menu Map is essentially composed of:
 
@@ -41,8 +40,6 @@ Menu Map is essentially composed of:
 4. A json config file described above
 
 ### 1. Copy `UGC3189342` folder to your `Plugins/` folder of PavlovVR-ModKit
-
-*See `Plugins/UGC3189342/Content/Levels/MiniMenu.umap` for usage*
 
 ### 2. Migrate `Plugins/UGC3189342/Content/Blueprints` into your plugin folder
 
