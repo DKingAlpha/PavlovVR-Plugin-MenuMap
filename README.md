@@ -2,6 +2,8 @@
 
 A map where players can vote for next playing maps.
 
+![Demo](UGC3189342/Resources/menu_map_20230729062427.png)
+
 ## Setup
 
 1. Edit Game.ini, make this map (UGC3189342) the only map in your server's map rotation list.
