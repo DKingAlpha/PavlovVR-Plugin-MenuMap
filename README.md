@@ -4,6 +4,11 @@ A map where players can vote for next playing maps.
 
 ![Demo](UGC3189342/Resources/menu_map_20230729062427.png)
 
+## Requirements
+
+1. A dedicated server with file system access (You can manually create config file for server)
+2. Python 3.11, with package `async-pavlov`. (`pip3 install async-pavlov`)
+
 ## Setup
 
 1. Edit Game.ini, make this map (UGC3189342) the only map in your server's map rotation list.
